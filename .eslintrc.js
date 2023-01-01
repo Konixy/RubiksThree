@@ -33,5 +33,4 @@ module.exports = {
     'tailwindcss/no-custom-classname': 'warn',
     'tailwindcss/no-contradicting-classname': 'error',
   },
-  plugins: ['tailwindcss'],
 };

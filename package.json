@@ -22,9 +22,10 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.11",
-    "nanoid": "^3.1.20",
+    "eslint-plugin-tailwindcss": "^3.7.1",
     "postcss": "^8.4.20",
     "postcss-import": "^15.1.0",
+    "prettier": "^2.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.57.1",
@@ -63,10 +64,13 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^3.0.0",
+<<<<<<< HEAD
     "eslint-plugin-tailwindcss": "^3.7.1",
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "tailwindcss-image-rendering": "^1.0.2",
+=======
+>>>>>>> parent of bb91cdf (Update)
     "vite": "^4.0.3",
     "vite-plugin-svgr": "^2.4.0",
     "vite-tsconfig-paths": "^4.0.3"
