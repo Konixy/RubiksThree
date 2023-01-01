@@ -1,7 +1,9 @@
 import React from 'react';
-export default function App() {
+
+function App() {
   return (
 <>app</>
   );
 }
 
+export default App

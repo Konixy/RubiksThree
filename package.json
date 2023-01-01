@@ -64,13 +64,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^3.0.0",
-<<<<<<< HEAD
-    "eslint-plugin-tailwindcss": "^3.7.1",
-    "prettier": "^2.8.1",
-    "prettier-plugin-tailwindcss": "^0.2.1",
-    "tailwindcss-image-rendering": "^1.0.2",
-=======
->>>>>>> parent of bb91cdf (Update)
     "vite": "^4.0.3",
     "vite-plugin-svgr": "^2.4.0",
     "vite-tsconfig-paths": "^4.0.3"
