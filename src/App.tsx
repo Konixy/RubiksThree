@@ -1,43 +1,36 @@
-import React, { useState } from 'react';
-import { genCube } from './cubeGenerator';
-
-export type Color = 'white' | 'yellow' | 'blue' | 'green' | 'orange' | 'red';
-export type CubeType = [Color[], Color[], Color[], Color[], Color[], Color[]];
-
-const hexFromColor = {
-  white: '#f0f0f0',
-  yellow: 'yellow',
-  blue: '#1d349e',
-  green: 'green',
-  orange: 'orange',
-  red: 'red',
-};
+/* eslint-disable react/no-unknown-property */
+import React, { Suspense } from 'react';
+import Cube from './MainCube';
+import { Canvas } from 'react-three-fiber';
+import { OrbitControls, Stats } from '@react-three/drei';
 
 function App() {
   return (
-    <div className="right-[50%] translate-x-[50%]">
-      <Cube />
+    <div
+      style={{
+        height: '100vh',
+        width: '100vw',
+      }}
+    >
+      <Canvas
+        camera={{
+          near: 0.1,
+          far: 1000,
+          zoom: 1,
+        }}
+        onCreated={({ gl }) => {
+          gl.setClearColor('#252934');
+        }}
+      >
+        <Stats />
+        <OrbitControls />
+        <Suspense fallback={'loading'}>
+          <pointLight intensity={1.0} position={[2, 3, 2]} />
+          <Cube />
+        </Suspense>
+      </Canvas>
     </div>
   );
-}
-
-function Cube() {
-  const [cube, setCube] = useState<CubeType>(genCube());
-  return (
-    <div className="">
-      {cube.map((face) => (
-        <div className="grid w-[68px] grid-cols-3 gap-1" key={face.toString()}>
-          {face.map((e) => (
-            <Square color={e} key={Math.random()} />
-          ))}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function Square({ color }: { color: Color }) {
-  return <div className="h-5 w-5" style={{ backgroundColor: hexFromColor[color] }}></div>;
 }
 
 export default App;
